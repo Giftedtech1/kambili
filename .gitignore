@@ -1,0 +1,13 @@
+# Firebase and Cloudinary Configuration
+firebase-config.js
+
+# Node.js / Environment (if added later)
+node_modules/
+.env
+.env.local
+
+# IDE and System Files
+.vscode/
+.DS_Store
+Thumbs.db
+.qodo/

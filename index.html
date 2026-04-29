@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kambili Scents | Luxury in Every Drop</title>
+  <link rel="icon" href="images/kambili%20logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="images/kambili%20logo.png" alt="Kambili Scents" style="height: 100px;">
+      </a>
+      
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 25px; z-index: 1001;">
+        <div id="cart-nav-btn" style="position: relative; cursor: pointer; display: flex; align-items: center; color: var(--text-main);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span id="cart-count" class="cart-count-badge">0</span>
+        </div>
+
+        <button class="hamburger" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#checkout">Checkout Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Welcome to <span style="color:#3da0e6;">kambili</span> Scents</h1>
+        <p>Luxury in Every Drop. Discover our exclusive collection of premium perfumes tailored just for you.</p>
+        <a href="#shop" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Brand Logos Slideshow -->
+    <div class="logo-slider" id="logo-slider">
+      <!-- Is injected via JS -->
+    </div>
+
+    <!-- Shop & Products Section -->
+    <section id="shop" class="products-section container">
+      <h2 class="section-title">Our Collection</h2>
+      
+      <div class="shop-controls" id="categories">
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search for a perfume...">
+        </div>
+        
+        <div class="category-filters" id="category-filters">
+          <button class="filter-btn active" data-category="All">All</button>
+          <button class="filter-btn" data-category="Men">Men</button>
+          <button class="filter-btn" data-category="Women">Women</button>
+          <button class="filter-btn" data-category="Unisex">Unisex</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Products will be injected here via JS -->
+      </div>
+      
+      <div id="load-more-container" style="text-align: center; margin-top: 50px; display: none;">
+        <button id="load-more-btn" class="btn btn-outline" style="min-width: 200px;">Load More Products</button>
+      </div>
+      
+      <div id="no-products-user-msg" class="empty-state" style="display: none;">
+        <p>No products found matching your search. Try different keywords or categories.</p>
+      </div>
+    </section>
+
+    <!-- Checkout Instructions -->
+    <section id="checkout" class="checkout-section">
+      <div class="container">
+        <div class="checkout-card">
+          <h3>How to Order & Pay</h3>
+          <p class="checkout-instructions">We currently handle all orders via WhatsApp to provide personalized customer service. Here is how it works:</p>
+          
+          <div class="bank-details">
+            <p><strong>Bank Name:</strong> <span>Guaranty Trust Bank (GTB)</span></p>
+            <p><strong>Account Name:</strong> <span>Kambili Scents Ltd</span></p>
+            <p><strong>Account Number:</strong> <span>0123456789</span></p>
+          </div>
+
+          <p class="checkout-instructions" style="text-align: left;">
+            1. Browse and find your desired perfume.<br>
+            2. Click the <strong>"Order on WhatsApp"</strong> button on the product.<br>
+            3. Note our bank details above and make your payment.<br>
+            4. Send us the generated message along with your payment proof!<br>
+          </p>
+          
+          <a href="https://wa.me/2349124438443?text=Hello%20Kambili%20Scents,%20I%20have%20sent%20a%20payment%20proof%20for%20an%20order." target="_blank" class="btn btn-outline" style="width: 100%; margin-top: 15px; color: green;">Send Payment Proof on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" style="max-width: 300px;">
+          <div class="footer-logo">
+            <img src="images/kambili%20logo.png" alt="Kambili Scents" style="height: 60px;">
+          </div>
+          <p>Elevating your presence with the finest fragrances. Built with passion and elegance.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Need help?</h4>
+          <p>Call us: <br><a href="tel:+2349124438443">+234 912 443 8443</a></p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+          
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kambili Scents. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Injected via JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">₦0</span>
+      </div>
+      <button class="btn btn-primary" id="checkout-btn" style="width: 100%;">Checkout on WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
