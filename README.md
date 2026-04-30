@@ -23,9 +23,7 @@ A static landing page and product storefront for Kambili Scents, built with HTML
 2. For a better local experience, serve the folder with a local web server.
    - Example: use VS Code Live Server or a simple Python server:
      ```powershell
-     python -m http.server 8000
-     ```
-3. Visit `http://localhost:8000`.
+ 
 
 ## Firebase setup
 
@@ -43,6 +41,3 @@ This repository includes a GitHub Actions workflow to deploy the site to GitHub 
 
 ## Notes
 
-- If your product queries use Firestore filters and ordering, make sure the required composite indexes exist.
-- The WhatsApp checkout link is currently set to `+2349124438443`.
-- Update product images, categories, and pricing in Firestore as needed.
