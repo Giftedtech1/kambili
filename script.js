@@ -348,22 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addToCart = addToCart;
-    const product = products.find(p => p.id === productId);
-    if (!product || product.stock === 'out') return;
-    
-    const existing = cart.find(i => i.id === productId);
-    if (existing) { existing.quantity += 1; }
-    else { cart.push({...product, quantity: 1}); }
-    
-    updateCartUI();
-    showToast(`${product.name} added to cart!`);
-    
-    // Automatically open modal for visual confirmation
-    if(cartModal) {
-      cartModal.classList.add('active');
-      cartOverlay.classList.add('active');
-    }
-  };
 
   window.updateCartQty = function(id, change) {
     const item = cart.find(i => i.id === id);
