@@ -1,5 +1,4 @@
-# Firebase and Cloudinary Configuration
-firebase-config.js
+# Cloudinary Configuration (keep local only if needed)
 
 # Node.js / Environment (if added later)
 node_modules/
