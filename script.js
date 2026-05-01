@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSection = document.querySelector('.hero');
   if (heroSection) {
     const heroBgImages = [
-      'images/hero bg 1.jpg',
-      'images/hero bg 2.jpg',
-      'images/hero bg 3.jpg',
-      'images/hero bg4.jpg',
-      'images/hero bg 5.jpg'
+      'images/hero%20bg%201.jpg',
+      'images/hero%20bg%202.jpg',
+      'images/hero%20bg%203.jpg',
+      'images/hero%20bg4.jpg',
+      'images/hero%20bg%205.jpg'
     ];
     
     // Set relative positioning and hide overflow on the hero section for absolutely positioned backgrounds
