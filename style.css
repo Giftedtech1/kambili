@@ -1018,3 +1018,124 @@ footer {
   height: 48px;
   margin-top: 15px;
 }
+
+/* ===== Admin Mobile Responsive ===== */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 30px 16px 60px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+
+  .admin-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .admin-header .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .admin-card {
+    padding: 24px 18px;
+    margin-bottom: 24px;
+  }
+
+  .admin-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  /* Transform table into mobile cards */
+  .admin-table-wrapper {
+    border: none;
+    overflow-x: unset;
+  }
+
+  .admin-table {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .admin-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 0.9rem;
+  }
+
+  .admin-table td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Add labels before each cell */
+  .admin-table td:nth-child(1)::before { content: "Image"; }
+  .admin-table td:nth-child(2)::before { content: "Name"; }
+  .admin-table td:nth-child(3)::before { content: "Price"; }
+  .admin-table td:nth-child(4)::before { content: "Category"; }
+  .admin-table td:nth-child(5)::before { content: "Status"; }
+  .admin-table td:nth-child(6)::before { content: "Actions"; }
+
+  .admin-table td::before {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+  }
+
+  .admin-table img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .action-btns {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .action-btns .btn {
+    padding: 10px 18px;
+    font-size: 0.8rem;
+    min-width: 70px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container {
+    padding: 20px 12px 50px;
+  }
+
+  .admin-card {
+    padding: 18px 14px;
+  }
+
+  .admin-header h1 {
+    font-size: 1.5rem;
+  }
+}
