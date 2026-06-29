@@ -434,6 +434,33 @@ document.addEventListener('DOMContentLoaded', () => {
     
     checkoutBtn.addEventListener('click', () => {
       if (cart.length === 0) return;
+
+      // Build order summary HTML for the payment modal
+      let summaryHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        summaryHTML += `
+          <div class="pay-summary-row">
+            <span>${item.quantity}x ${item.name}</span>
+            <span>₦${itemTotal.toLocaleString()}</span>
+          </div>`;
+      });
+
+      // Populate the payment modal
+      document.getElementById('pay-order-summary').innerHTML = summaryHTML;
+      document.getElementById('pay-modal-total').textContent = `₦${total.toLocaleString()}`;
+
+      // Close cart, open payment modal
+      cartModal.classList.remove('active');
+      cartOverlay.classList.remove('active');
+      document.getElementById('pay-modal').classList.add('active');
+      document.getElementById('pay-overlay').classList.add('active');
+    });
+
+    // WhatsApp proof button inside payment modal
+    document.getElementById('whatsapp-proof-btn').addEventListener('click', () => {
       let text = "Hello Kambili Scents, I would like to place an order:%0A%0A";
       let total = 0;
       cart.forEach(item => {
@@ -443,12 +470,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       text += `%0A*Total Amount: ₦${total.toLocaleString()}*%0A%0AHere is my payment proof!`;
       window.open(`https://wa.me/2349124438443?text=${text}`, '_blank');
-      
-      // Optionally clear cart and close modal
+
+      // Clear cart and close modal
       cart = [];
       updateCartUI();
-      cartModal.classList.remove('active'); 
-      cartOverlay.classList.remove('active');
+      document.getElementById('pay-modal').classList.remove('active');
+      document.getElementById('pay-overlay').classList.remove('active');
+    });
+
+    // Back to cart button
+    document.getElementById('pay-back-btn').addEventListener('click', () => {
+      document.getElementById('pay-modal').classList.remove('active');
+      document.getElementById('pay-overlay').classList.remove('active');
+      cartModal.classList.add('active');
+      cartOverlay.classList.add('active');
+    });
+
+    // Close payment modal on overlay click
+    document.getElementById('pay-overlay').addEventListener('click', () => {
+      document.getElementById('pay-modal').classList.remove('active');
+      document.getElementById('pay-overlay').classList.remove('active');
+    });
+
+    // Close payment modal on X button
+    document.getElementById('close-pay-modal').addEventListener('click', () => {
+      document.getElementById('pay-modal').classList.remove('active');
+      document.getElementById('pay-overlay').classList.remove('active');
     });
 
     updateCartUI();
